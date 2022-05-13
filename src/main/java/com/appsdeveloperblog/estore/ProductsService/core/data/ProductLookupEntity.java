@@ -1,32 +1,24 @@
 package com.appsdeveloperblog.estore.ProductsService.core.data;
 
-import java.io.Serializable;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+//usually it should use another data source
 @Entity
-@Table(name="productlookup")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "productlookup")
 public class ProductLookupEntity implements Serializable {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 2788007460547645663L;
-	
-	@Id
-	private String productId;
-	
-	@Column(unique=true)
-	private String title;
-
+    @Id
+    private String productId;
+    @Column(unique = true)
+    private String title;
 }

@@ -1,12 +1,11 @@
 package com.appsdeveloperblog.estore.ProductsService.command.rest;
 
-import java.math.BigDecimal;
+import lombok.Data;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
-
-import lombok.Data;
+import java.math.BigDecimal;
 
 @Data
 public class CreateProductRestModel {

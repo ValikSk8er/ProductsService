@@ -1,20 +1,18 @@
 package com.appsdeveloperblog.estore.ProductsService.command;
 
-import java.math.BigDecimal;
-
-import org.axonframework.modelling.command.TargetAggregateIdentifier;
-
 import lombok.Builder;
 import lombok.Data;
+import org.axonframework.modelling.command.TargetAggregateIdentifier;
 
-@Builder
+import java.math.BigDecimal;
+
 @Data
+@Builder
 public class CreateProductCommand {
-	
-	@TargetAggregateIdentifier
-	private final String productId;
-	private final String title;
-	private final BigDecimal price;
-	private final Integer quantity;
-	
+
+    @TargetAggregateIdentifier
+    private final String productId;
+    private final String title;
+    private final Integer quantity;
+    private final BigDecimal price;
 }
